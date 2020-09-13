@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Volume Control</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+      div {
+          font-family: 'Roboto Mono', monospace;
+          font-size: 30px;
+          display: inline;
+      }
+
+      #plus {
+          color: green;
+      }
+
+      #minus {
+          color: red; 
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id='plus'>+</div>
+    <div id='minus'>-</div>
+    <script>
+      document.getElementById("plus").onclick = () => {
+          fetch(window.location.href + "volup")
+              .catch(e => console.log(e));
+      }
+      document.getElementById("minus").onclick = () => {
+          fetch(window.location.href + "voldown")
+              .catch(e => console.log(e));
+      }
+    </script>
+
+  </body>
+</html>
